@@ -10,21 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-import json
-from django.core.exceptions import ImproperlyConfigured
 from pathlib import Path
-
-# Get secret settings (database credentials, secret keys, etc.)
-with open(os.path.abspath("bankproject-secrets.json")) as f:
-    secrets = json.loads(f.read())
-
-
-def get_secret_setting(setting, secrets=secrets):
-    try:
-        return secrets[setting]
-    except KeyError:
-        raise ImproperlyConfigured(f"Set the {setting} setting.")
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
