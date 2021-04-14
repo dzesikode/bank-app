@@ -62,6 +62,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bankproject.wsgi.application'
 
+DEFAULT_USERS = {
+    'admin': 'ADMIN',
+    'product_manager': 'PRODUCT-MANAGER',
+    'test_user': 'USER'
+}
+
+DEFAULT_PRODUCTS = {
+    ''
+}
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
