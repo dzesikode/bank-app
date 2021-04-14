@@ -3,6 +3,7 @@
 back-end/htmlcov
 back-end/.coverage
 back-end/.coveragerc
+back-end/bankapp/migrations
 .git
 .gitignore
 front-end/node_modules
