@@ -97,7 +97,7 @@ DEFAULT_PRODUCTS = [
         'name': 'Debit Card',
         'age': ['ADULT', 'SENIOR'],
         'student': False,
-        'income': ['NO_INCOME', 'LOW_INCOME',],
+        'income': ['NO_INCOME', 'LOW_INCOME'],
     },
     {
         'name': 'Credit Card',
