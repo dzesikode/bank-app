@@ -68,9 +68,50 @@ DEFAULT_USERS = {
     'test_user': 'USER'
 }
 
-DEFAULT_PRODUCTS = {
-    ''
-}
+DEFAULT_PRODUCTS = [
+    {
+        'name': 'Current Account',
+        'age': ['ADULT', 'SENIOR'],
+        'student': False,
+        'income': ['LOW_INCOME', 'MEDIUM_INCOME', 'HIGH_INCOME'],
+    },
+    {
+        'name': 'Current Account Plus',
+        'age': ['ADULT', 'SENIOR'],
+        'student': False,
+        'income': ['HIGH_INCOME'],
+    },
+    {
+        'name': 'Junior Saver Account',
+        'age': ['JUNIOR'],
+        'student': False,
+        'income': ['NO_INCOME', 'LOW_INCOME', 'MEDIUM_INCOME', 'HIGH_INCOME'],
+    },
+    {
+        'name': 'Student Account',
+        'age': ['ADULT', 'SENIOR'],
+        'student': True,
+        'income': ['NO_INCOME', 'LOW_INCOME', 'MEDIUM_INCOME', 'HIGH_INCOME'],
+    },
+    {
+        'name': 'Debit Card',
+        'age': ['ADULT', 'SENIOR'],
+        'student': False,
+        'income': ['NO_INCOME', 'LOW_INCOME',],
+    },
+    {
+        'name': 'Credit Card',
+        'age': ['ADULT', 'SENIOR'],
+        'student': False,
+        'income': ['MEDIUM_INCOME', 'HIGH_INCOME'],
+    },
+    {
+        'name': 'Gold Credit Card',
+        'age': ['ADULT', 'SENIOR'],
+        'student': False,
+        'income': ['HIGH_INCOME'],
+    },
+]
 
 
 
