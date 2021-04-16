@@ -12,7 +12,9 @@ services:
   backend:
     build:
       context: ./back-end
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: >
+      bash -c "python3 manage.py migrate && python3 manage.py initproducts && python3 manage.py initusers &&
+      python3 manage.py runserver 0.0.0.0:8000"
     container_name: backend-container
     volumes:
       - ./backend/:/back-end/
@@ -32,3 +34,4 @@ services:
 volumes:
   postgres_data:
 
+# todo configure nginx server
