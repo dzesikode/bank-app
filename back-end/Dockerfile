@@ -19,3 +19,4 @@ COPY . /backend/
 
 # Open a port on the container
 EXPOSE 8000
+EXPOSE 5432
