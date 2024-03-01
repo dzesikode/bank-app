@@ -72,6 +72,17 @@ DEFAULT_USERS = {
     'test_user': 'USER'
 }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': "bankapp-db",
+        'PORT': 5432,
+    }
+}
+
 DEFAULT_PRODUCTS = [
     {
         'name': 'Current Account',
