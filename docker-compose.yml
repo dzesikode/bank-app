@@ -2,13 +2,17 @@ version: '3.8'
 
 services:
   db:
+    container_name: bankapp-db
     image: postgres:12.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      POSTGRES_USER: 'admin'
-      POSTGRES_PASSWORD: 'admin'
-      POSTGRES_DB: 'bankproject'
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./back-end/config/.env
+    networks:
+      - bankapp-network
+    command: postgres -c listen_addresses='*'
   backend:
     build:
       context: ./back-end
@@ -22,6 +26,11 @@ services:
       - '8000:8000'
     depends_on:
       - db
+    environment:
+      - DB_HOST=bankapp-db
+      - DB_PORT=5432
+    networks:
+      - bankapp-network
   frontend:
     build:
       context: ./front-end
@@ -31,7 +40,12 @@ services:
       - backend
     ports:
       - '4200:4200'
+    networks:
+      - bankapp-network
 volumes:
   postgres_data:
+networks:
+  bankapp-network:
+    driver: bridge
 
 # todo configure nginx server
