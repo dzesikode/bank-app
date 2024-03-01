@@ -13,12 +13,21 @@ services:
     networks:
       - bankapp-network
     command: postgres -c listen_addresses='*'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready --quiet --dbname=$${POSTGRES_DB}--username=$${POSTGRES_USER} || exit 1"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
   backend:
     build:
       context: ./back-end
     command: >
-      bash -c "python3 manage.py migrate && python3 manage.py initproducts && python3 manage.py initusers &&
-      python3 manage.py runserver 0.0.0.0:8000"
+      bash -c "python manage.py makemigrations bankapp && 
+      python manage.py migrate && 
+      python manage.py initproducts && 
+      python manage.py initusers &&
+      python manage.py runserver 0.0.0.0:8000"
     container_name: backend-container
     volumes:
       - ./backend/:/back-end/
