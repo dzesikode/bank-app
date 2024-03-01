@@ -66,12 +66,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bankproject.wsgi.application'
 
-DEFAULT_USERS = {
-    'admin': 'ADMIN',
-    'product_manager': 'PRODUCT-MANAGER',
-    'test_user': 'USER'
-}
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -82,52 +76,6 @@ DATABASES = {
         'PORT': 5432,
     }
 }
-
-DEFAULT_PRODUCTS = [
-    {
-        'name': 'Current Account',
-        'age': ['ADULT', 'SENIOR'],
-        'student': False,
-        'income': ['LOW_INCOME', 'MEDIUM_INCOME', 'HIGH_INCOME'],
-    },
-    {
-        'name': 'Current Account Plus',
-        'age': ['ADULT', 'SENIOR'],
-        'student': False,
-        'income': ['HIGH_INCOME'],
-    },
-    {
-        'name': 'Junior Saver Account',
-        'age': ['JUNIOR'],
-        'student': False,
-        'income': ['NO_INCOME', 'LOW_INCOME', 'MEDIUM_INCOME', 'HIGH_INCOME'],
-    },
-    {
-        'name': 'Student Account',
-        'age': ['ADULT', 'SENIOR'],
-        'student': True,
-        'income': ['NO_INCOME', 'LOW_INCOME', 'MEDIUM_INCOME', 'HIGH_INCOME'],
-    },
-    {
-        'name': 'Debit Card',
-        'age': ['ADULT', 'SENIOR'],
-        'student': False,
-        'income': ['NO_INCOME', 'LOW_INCOME'],
-    },
-    {
-        'name': 'Credit Card',
-        'age': ['ADULT', 'SENIOR'],
-        'student': False,
-        'income': ['MEDIUM_INCOME', 'HIGH_INCOME'],
-    },
-    {
-        'name': 'Gold Credit Card',
-        'age': ['ADULT', 'SENIOR'],
-        'student': False,
-        'income': ['HIGH_INCOME'],
-    },
-]
-
 
 
 # Password validation
