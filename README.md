@@ -1,9 +1,42 @@
-# Bank App Project
+# Bank App
 
-A single-page application with RESTful API that consists of a Django backend and Angular frontend. 
-It presents product recommendations to a registered user based on the answers to a questionnaire.
+Bank App is a proof-of-concept, single-page application that generates banking product recommendations to registered users based on answers to a questionnaire.
 
-It uses persistence in the form of a PostgreSQL database.
+## Features
+* User authentication
+* Tokens
+* User permissions and roles
+* Data persistence
+* User interface
+* RESTful APIs
+
+## Tech
+* Python
+* Django
+* PostgreSQL
+* TypeScript
+* Angular
+* Docker
+
+## Setup
+1. Get the code
+   ```sh
+   git clone https://github.com/dzesikode/bank-app
+   ```
+2. Ensure you're in the root directory (bank-app)
+3. Copy the example env file
+   ```sh
+   cp ./back-end/config/.env.example ./back-end/config/.env
+   ```
+4. Start the app
+   ```sh
+   docker-compose up --build
+   ```
+5. Navigate to http://localhost:4200 in your browser
+
+## Future features
+* Update project and libraries to newest versions
+* Polishing of UI
 
 
 Method | Path | Description | User Role
