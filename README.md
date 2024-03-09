@@ -17,6 +17,7 @@ Bank App is a proof-of-concept, single-page application that generates banking p
 * TypeScript
 * Angular
 * Docker
+* HTML/CSS
 
 ## Setup
 1. Get the code
@@ -38,6 +39,7 @@ Bank App is a proof-of-concept, single-page application that generates banking p
 * Update project and libraries to newest versions
 * Polishing of UI
 
+## APIs
 
 Method | Path | Description | User Role
 --- | --- | --- | ---
