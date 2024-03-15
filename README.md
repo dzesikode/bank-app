@@ -1,4 +1,4 @@
-# Bank App
+# BankIQ Recommendation Generator
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -10,7 +10,7 @@
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-Bank App is a proof-of-concept, single-page application that generates banking product recommendations to registered users based on answers to a questionnaire.
+BankIQ Recommendation Generator is a proof-of-concept, single-page application that generates banking product recommendations to registered users based on answers to a questionnaire.
 
 ## Features
 * User authentication
@@ -32,7 +32,7 @@ Bank App is a proof-of-concept, single-page application that generates banking p
 ## Setup
 1. Get the code
    ```sh
-   git clone https://github.com/dzesikode/bank-app
+   git clone https://github.com/dzesikode/bank-iq
    ```
 2. Ensure you're in the root directory (bank-app)
 3. Copy the example env file
